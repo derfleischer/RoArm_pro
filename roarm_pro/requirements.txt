@@ -1,0 +1,6 @@
+# RoArm Pro Dependencies
+pyserial==3.5
+numpy==1.24.3
+pyyaml==6.0.1
+dataclasses-json==0.6.1
+scipy==1.10.1  # Für advanced trajectories (optional)
