@@ -18,26 +18,22 @@ class CommandBuilder:
     def joint_control(**kwargs) -> Dict[str, Any]:
         """
         Build joint control command
-        Args: base, shoulder, elbow, wrist, roll, hand (in radians)
+        Args: base, shoulder, elbow, hand (in radians)
         """
         cmd = COMMANDS["JOINT_CONTROL"].copy()
         
-        # Map joint names to command parameters
-        joint_mapping = {
-            'base': 'joint1',
-            'shoulder': 'joint2',
-            'elbow': 'joint3',
-            'wrist': 'joint4',
-            'roll': 'joint5',
-            'hand': 'joint6'
-        }
+        # RoArm M3 Pro verwendet direkt diese Namen:
+        for joint in ['base', 'shoulder', 'elbow', 'hand']:
+            if joint in kwargs:
+                cmd[joint] = kwargs[joint]
         
-        for joint, value in kwargs.items():
-            if joint in joint_mapping and value is not None:
-                cmd[joint_mapping[joint]] = float(value)
-        
-        return cmd
-    
+        # Optional: spd und acc hinzufügen
+        if 'spd' in kwargs:
+            cmd['spd'] = kwargs.get('spd', 0)
+        if 'acc' in kwargs:
+            cmd['acc'] = kwargs.get('acc', 10)
+            
+        return cmd    
     @staticmethod
     def led_control(brightness: int = 255, on: bool = True) -> Dict[str, Any]:
         """
