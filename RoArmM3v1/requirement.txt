@@ -1,0 +1,463 @@
+# requirements.txt
+pyserial>=3.5
+numpy>=1.24.0
+pyyaml>=6.0
+colorama>=0.4.6
+scipy>=1.10.0
+
+# ============================================
+# core/serial_comm.py
+# ============================================
+#!/usr/bin/env python3
+"""
+Serial Communication Manager für RoArm M3
+Thread-safe serial communication with automatic reconnection.
+"""
+
+import serial
+import json
+import time
+import threading
+from typing import Optional, Dict, Any
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+class SerialManager:
+    """Thread-safe serial communication manager."""
+    
+    def __init__(self, port: str, baudrate: int = 115200, timeout: float = 2.0):
+        self.port = port
+        self.baudrate = baudrate
+        self.timeout = timeout
+        self.serial = None
+        self.connected = False
+        self._lock = threading.Lock()
+        
+    def connect(self) -> bool:
+        """Establish serial connection."""
+        try:
+            with self._lock:
+                self.serial = serial.Serial(
+                    port=self.port,
+                    baudrate=self.baudrate,
+                    timeout=self.timeout,
+                    write_timeout=self.timeout
+                )
+                self.connected = True
+                # Clear buffers
+                self.serial.reset_input_buffer()
+                self.serial.reset_output_buffer()
+                return True
+        except Exception as e:
+            logger.error(f"Serial connection failed: {e}")
+            self.connected = False
+            return False
+    
+    def disconnect(self):
+        """Close serial connection."""
+        with self._lock:
+            if self.serial and self.serial.is_open:
+                self.serial.close()
+            self.connected = False
+    
+    def send_command(self, command: Dict[str, Any], wait_response: bool = False) -> Optional[str]:
+        """
+        Send JSON command to RoArm.
+        
+        Args:
+            command: Command dictionary
+            wait_response: Wait for response
+            
+        Returns:
+            Response string if wait_response=True
+        """
+        if not self.connected:
+            logger.error("Not connected")
+            return None
+        
+        try:
+            with self._lock:
+                # Convert to JSON and send
+                json_str = json.dumps(command) + '\n'
+                self.serial.write(json_str.encode('utf-8'))
+                
+                if wait_response:
+                    response = self.serial.readline().decode('utf-8').strip()
+                    return response
+                    
+                return None
+                
+        except Exception as e:
+            logger.error(f"Send command error: {e}")
+            return None
+    
+    def read_response(self, timeout: Optional[float] = None) -> Optional[str]:
+        """Read response from serial."""
+        if not self.connected:
+            return None
+        
+        try:
+            with self._lock:
+                if timeout:
+                    old_timeout = self.serial.timeout
+                    self.serial.timeout = timeout
+                    response = self.serial.readline().decode('utf-8').strip()
+                    self.serial.timeout = old_timeout
+                else:
+                    response = self.serial.readline().decode('utf-8').strip()
+                
+                return response if response else None
+                
+        except Exception as e:
+            logger.error(f"Read response error: {e}")
+            return None
+
+
+# ============================================
+# motion/trajectory.py
+# ============================================
+#!/usr/bin/env python3
+"""
+Trajectory Generator für RoArm M3
+Verschiedene Bewegungsprofile für smooth motion.
+"""
+
+import numpy as np
+from enum import Enum
+from dataclasses import dataclass
+from typing import Dict, List
+import math
+
+
+class TrajectoryType(Enum):
+    """Verfügbare Trajectory-Typen."""
+    LINEAR = "linear"
+    TRAPEZOIDAL = "trapezoidal"
+    S_CURVE = "s_curve"
+    SINUSOIDAL = "sinusoidal"
+    QUINTIC = "quintic"
+
+
+@dataclass
+class TrajectoryPoint:
+    """Ein Punkt in der Trajectory."""
+    positions: Dict[str, float]
+    velocities: Dict[str, float] = None
+    time_delta: float = 0.0
+
+
+class TrajectoryGenerator:
+    """Generiert smooth trajectories zwischen Positionen."""
+    
+    def generate(self, start: Dict[str, float], 
+                end: Dict[str, float],
+                speed: float = 1.0,
+                trajectory_type: TrajectoryType = TrajectoryType.S_CURVE,
+                num_points: int = 50) -> List[TrajectoryPoint]:
+        """
+        Generiert Trajectory-Punkte.
+        
+        Args:
+            start: Start-Positionen
+            end: Ziel-Positionen
+            speed: Geschwindigkeitsfaktor
+            trajectory_type: Bewegungsprofil
+            num_points: Anzahl Zwischenpunkte
+            
+        Returns:
+            Liste von Trajectory-Punkten
+        """
+        points = []
+        
+        # Berechne Gesamtzeit basierend auf größter Bewegung
+        max_delta = 0
+        for joint in start:
+            if joint in end:
+                delta = abs(end[joint] - start[joint])
+                max_delta = max(max_delta, delta)
+        
+        # Basis-Zeit (kann durch speed angepasst werden)
+        total_time = max_delta / speed
+        
+        if total_time == 0:
+            # Keine Bewegung nötig
+            return [TrajectoryPoint(positions=end.copy())]
+        
+        # Generiere Zeitpunkte
+        times = np.linspace(0, total_time, num_points)
+        
+        # Generiere Punkte basierend auf Profil
+        if trajectory_type == TrajectoryType.LINEAR:
+            points = self._linear_trajectory(start, end, times)
+        elif trajectory_type == TrajectoryType.S_CURVE:
+            points = self._s_curve_trajectory(start, end, times)
+        elif trajectory_type == TrajectoryType.TRAPEZOIDAL:
+            points = self._trapezoidal_trajectory(start, end, times)
+        elif trajectory_type == TrajectoryType.SINUSOIDAL:
+            points = self._sinusoidal_trajectory(start, end, times)
+        else:
+            points = self._linear_trajectory(start, end, times)
+        
+        return points
+    
+    def _linear_trajectory(self, start: Dict[str, float], 
+                          end: Dict[str, float], 
+                          times: np.ndarray) -> List[TrajectoryPoint]:
+        """Lineare Interpolation."""
+        points = []
+        
+        for i, t in enumerate(times):
+            s = t / times[-1]  # Normalized time (0 to 1)
+            
+            positions = {}
+            for joint in start:
+                if joint in end:
+                    positions[joint] = start[joint] + s * (end[joint] - start[joint])
+            
+            time_delta = times[i] - times[i-1] if i > 0 else 0
+            points.append(TrajectoryPoint(positions=positions, time_delta=time_delta))
+        
+        return points
+    
+    def _s_curve_trajectory(self, start: Dict[str, float], 
+                           end: Dict[str, float], 
+                           times: np.ndarray) -> List[TrajectoryPoint]:
+        """S-Kurven Profil (smooth acceleration)."""
+        points = []
+        
+        for i, t in enumerate(times):
+            # S-curve formula (sigmoid-like)
+            s_norm = t / times[-1]
+            s = s_norm**2 * (3 - 2 * s_norm)  # Smooth step
+            
+            positions = {}
+            for joint in start:
+                if joint in end:
+                    positions[joint] = start[joint] + s * (end[joint] - start[joint])
+            
+            time_delta = times[i] - times[i-1] if i > 0 else 0
+            points.append(TrajectoryPoint(positions=positions, time_delta=time_delta))
+        
+        return points
+    
+    def _trapezoidal_trajectory(self, start: Dict[str, float], 
+                               end: Dict[str, float], 
+                               times: np.ndarray) -> List[TrajectoryPoint]:
+        """Trapez-Profil (constant velocity with ramps)."""
+        points = []
+        
+        # 20% acceleration, 60% constant, 20% deceleration
+        accel_time = 0.2
+        
+        for i, t in enumerate(times):
+            s_norm = t / times[-1]
+            
+            if s_norm < accel_time:
+                # Acceleration phase
+                s = 0.5 * (s_norm / accel_time) ** 2 * accel_time
+            elif s_norm < 1 - accel_time:
+                # Constant velocity phase
+                s = 0.5 * accel_time + (s_norm - accel_time)
+            else:
+                # Deceleration phase
+                decel_s = (s_norm - (1 - accel_time)) / accel_time
+                s = 1 - 0.5 * accel_time * (1 - decel_s) ** 2
+            
+            positions = {}
+            for joint in start:
+                if joint in end:
+                    positions[joint] = start[joint] + s * (end[joint] - start[joint])
+            
+            time_delta = times[i] - times[i-1] if i > 0 else 0
+            points.append(TrajectoryPoint(positions=positions, time_delta=time_delta))
+        
+        return points
+    
+    def _sinusoidal_trajectory(self, start: Dict[str, float], 
+                              end: Dict[str, float], 
+                              times: np.ndarray) -> List[TrajectoryPoint]:
+        """Sinusförmiges Profil."""
+        points = []
+        
+        for i, t in enumerate(times):
+            s_norm = t / times[-1]
+            s = 0.5 * (1 - math.cos(math.pi * s_norm))
+            
+            positions = {}
+            for joint in start:
+                if joint in end:
+                    positions[joint] = start[joint] + s * (end[joint] - start[joint])
+            
+            time_delta = times[i] - times[i-1] if i > 0 else 0
+            points.append(TrajectoryPoint(positions=positions, time_delta=time_delta))
+        
+        return points
+
+
+# ============================================
+# utils/logger.py
+# ============================================
+#!/usr/bin/env python3
+"""
+Logging utilities für RoArm M3 System.
+"""
+
+import logging
+import sys
+from colorama import init, Fore, Style
+
+# Initialize colorama for cross-platform colored output
+init(autoreset=True)
+
+
+class ColoredFormatter(logging.Formatter):
+    """Custom formatter with colors."""
+    
+    COLORS = {
+        'DEBUG': Fore.CYAN,
+        'INFO': Fore.GREEN,
+        'WARNING': Fore.YELLOW,
+        'ERROR': Fore.RED,
+        'CRITICAL': Fore.MAGENTA
+    }
+    
+    def format(self, record):
+        log_color = self.COLORS.get(record.levelname, '')
+        record.levelname = f"{log_color}{record.levelname}{Style.RESET_ALL}"
+        return super().format(record)
+
+
+def setup_logger(level=logging.INFO):
+    """Setup the logging system."""
+    # Root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(level)
+    
+    # Console handler
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(ColoredFormatter(
+        '%(asctime)s - %(levelname)s - %(name)s - %(message)s',
+        datefmt='%H:%M:%S'
+    ))
+    root_logger.addHandler(console_handler)
+    
+    # File handler
+    file_handler = logging.FileHandler('roarm_system.log')
+    file_handler.setFormatter(logging.Formatter(
+        '%(asctime)s - %(levelname)s - %(name)s - %(funcName)s:%(lineno)d - %(message)s'
+    ))
+    root_logger.addHandler(file_handler)
+
+
+def get_logger(name):
+    """Get a logger instance."""
+    return logging.getLogger(name)
+
+
+# ============================================
+# utils/safety.py
+# ============================================
+#!/usr/bin/env python3
+"""
+Safety monitoring für RoArm M3.
+"""
+
+from typing import Dict
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+class SafetyMonitor:
+    """Überwacht Sicherheitsgrenzen."""
+    
+    def __init__(self, servo_limits: Dict[str, tuple]):
+        self.servo_limits = servo_limits
+        
+    def validate_positions(self, positions: Dict[str, float]) -> bool:
+        """
+        Validiert Positionen gegen Servo-Limits.
+        
+        Args:
+            positions: Joint-Positionen
+            
+        Returns:
+            True wenn alle Positionen gültig
+        """
+        for joint, pos in positions.items():
+            if joint in self.servo_limits:
+                min_val, max_val = self.servo_limits[joint]
+                if pos < min_val or pos > max_val:
+                    logger.error(f"Position {joint}={pos:.3f} outside limits [{min_val:.3f}, {max_val:.3f}]")
+                    return False
+        return True
+    
+    def clamp_positions(self, positions: Dict[str, float]) -> Dict[str, float]:
+        """Begrenzt Positionen auf sichere Werte."""
+        clamped = {}
+        for joint, pos in positions.items():
+            if joint in self.servo_limits:
+                min_val, max_val = self.servo_limits[joint]
+                clamped[joint] = max(min_val, min(max_val, pos))
+            else:
+                clamped[joint] = pos
+        return clamped
+
+
+# ============================================
+# utils/terminal.py
+# ============================================
+#!/usr/bin/env python3
+"""
+Terminal utilities für macOS.
+"""
+
+import sys
+import tty
+import termios
+import select
+
+
+class TerminalController:
+    """Terminal control für macOS."""
+    
+    def __init__(self):
+        self.old_settings = None
+        
+    def get_key(self, timeout: float = 0.1):
+        """Get single keypress (non-blocking)."""
+        if sys.platform != 'darwin':
+            # Fallback for non-macOS
+            return input()
+        
+        try:
+            # Save old settings
+            if not self.old_settings:
+                self.old_settings = termios.tcgetattr(sys.stdin)
+            
+            # Set terminal to raw mode
+            tty.setraw(sys.stdin.fileno())
+            
+            # Check if input available
+            if select.select([sys.stdin], [], [], timeout)[0]:
+                key = sys.stdin.read(1)
+            else:
+                key = None
+            
+            # Restore settings
+            termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
+            
+            return key
+            
+        except Exception:
+            # Restore on error
+            if self.old_settings:
+                termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
+            return None
+    
+    def __del__(self):
+        """Restore terminal settings on cleanup."""
+        if self.old_settings:
+            termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
