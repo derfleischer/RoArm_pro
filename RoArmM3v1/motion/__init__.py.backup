@@ -1,0 +1,39 @@
+# ============================================
+# motion/__init__.py
+# ============================================
+"""
+RoArm M3 Motion Control
+Trajectory generation and motion planning
+"""
+
+__version__ = '3.0.0'
+__author__ = 'RoArm Professional Team'
+
+from .trajectory import (
+    TrajectoryGenerator,
+    TrajectoryType,
+    TrajectoryPoint
+)
+
+# Try Enhanced Motion features
+try:
+    from enhanced.motion import (
+        AdvancedTrajectoryGenerator,
+        CollisionAvoidance,
+        DynamicPathPlanning,
+        MotionOptimizer
+    )
+    ENHANCED_MOTION = True
+    
+    # Replace with enhanced version
+    TrajectoryGenerator = AdvancedTrajectoryGenerator
+    
+except ImportError:
+    ENHANCED_MOTION = False
+
+__all__ = [
+    'TrajectoryGenerator',
+    'TrajectoryType',
+    'TrajectoryPoint',
+    'ENHANCED_MOTION'
+]
