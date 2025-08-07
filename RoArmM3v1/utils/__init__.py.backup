@@ -1,0 +1,163 @@
+# ============================================
+# utils/__init__.py
+# ============================================
+"""
+RoArm M3 Utilities
+Logging, terminal control, and helper functions
+"""
+
+__version__ = '3.0.0'
+__author__ = 'RoArm Professional Team'
+
+from .logger import setup_logger, get_logger
+from .terminal import TerminalController
+
+# Try importing optional utilities
+try:
+    from .safety import SafetyMonitor
+    SAFETY_MONITOR = True
+except ImportError:
+    SafetyMonitor = None
+    SAFETY_MONITOR = False
+
+try:
+    from .debug_mode import MockController, DebugMode
+    DEBUG_MODE = True
+except ImportError:
+    MockController = None
+    DebugMode = None
+    DEBUG_MODE = False
+
+# Try Enhanced Utils
+try:
+    from enhanced.utils import (
+        PerformanceProfiler,
+        DataLogger,
+        ConfigManager,
+        NetworkManager
+    )
+    ENHANCED_UTILS = True
+except ImportError:
+    ENHANCED_UTILS = False
+    PerformanceProfiler = None
+    DataLogger = None
+    ConfigManager = None
+    NetworkManager = None
+
+__all__ = [
+    'setup_logger',
+    'get_logger',
+    'TerminalController',
+    'SafetyMonitor',
+    'MockController',
+    'DebugMode',
+    'SAFETY_MONITOR',
+    'DEBUG_MODE',
+    'ENHANCED_UTILS'
+]
+
+# Add enhanced utils if available
+if ENHANCED_UTILS:
+    __all__.extend([
+        'PerformanceProfiler',
+        'DataLogger',
+        'ConfigManager',
+        'NetworkManager'
+    ])
+
+# ============================================
+# enhanced/__init__.py (für Enhanced Features)
+# ============================================
+"""
+RoArm M3 Enhanced Features
+Advanced capabilities with ML, Vision, and Cloud
+"""
+
+__version__ = '1.0.0'
+__author__ = 'RoArm Professional Team'
+
+# Feature flags
+FEATURES = {
+    'vision': False,
+    'ml_optimizer': False,
+    'adaptive_control': False,
+    'predictive_motion': False,
+    'cloud_sync': False,
+    'realtime_monitor': False
+}
+
+# Try importing enhanced modules
+try:
+    from .vision import VisionSystem
+    FEATURES['vision'] = True
+except ImportError:
+    VisionSystem = None
+
+try:
+    from .ml_optimizer import MLOptimizer
+    FEATURES['ml_optimizer'] = True
+except ImportError:
+    MLOptimizer = None
+
+try:
+    from .adaptive_control import AdaptiveControl
+    FEATURES['adaptive_control'] = True
+except ImportError:
+    AdaptiveControl = None
+
+try:
+    from .predictive_motion import PredictiveMotion
+    FEATURES['predictive_motion'] = True
+except ImportError:
+    PredictiveMotion = None
+
+try:
+    from .cloud_sync import CloudSync
+    FEATURES['cloud_sync'] = True
+except ImportError:
+    CloudSync = None
+
+try:
+    from .realtime_monitor import RealtimeMonitoring
+    FEATURES['realtime_monitor'] = True
+except ImportError:
+    RealtimeMonitoring = None
+
+# Check if any enhanced features are available
+ENHANCED_AVAILABLE = any(FEATURES.values())
+
+__all__ = [
+    'FEATURES',
+    'ENHANCED_AVAILABLE'
+]
+
+# Add available modules to exports
+if FEATURES['vision']:
+    __all__.append('VisionSystem')
+if FEATURES['ml_optimizer']:
+    __all__.append('MLOptimizer')
+if FEATURES['adaptive_control']:
+    __all__.append('AdaptiveControl')
+if FEATURES['predictive_motion']:
+    __all__.append('PredictiveMotion')
+if FEATURES['cloud_sync']:
+    __all__.append('CloudSync')
+if FEATURES['realtime_monitor']:
+    __all__.append('RealtimeMonitoring')
+
+def get_available_features():
+    """Return list of available enhanced features."""
+    return [name for name, available in FEATURES.items() if available]
+
+def print_feature_status():
+    """Print status of all enhanced features."""
+    print("\n🚀 Enhanced Features Status:")
+    print("-" * 40)
+    for feature, available in FEATURES.items():
+        status = "✅" if available else "❌"
+        print(f"{status} {feature.replace('_', ' ').title()}")
+    print("-" * 40)
+    if ENHANCED_AVAILABLE:
+        print(f"✅ {sum(FEATURES.values())} enhanced features available")
+    else:
+        print("ℹ️  Running in standard mode")
