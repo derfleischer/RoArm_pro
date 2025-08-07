@@ -1,0 +1,157 @@
+2025-08-07 10:08:52 - utils.logger - INFO - logger.py:126 - ✅ ============================================================
+2025-08-07 10:08:52 - utils.logger - INFO - logger.py:127 - ✅ RoArm M3 Logging System Initialized
+2025-08-07 10:08:52 - utils.logger - INFO - logger.py:128 - ✅ Log directory: /Users/michaelfleischer/Desktop/RoArmM3v1/logs
+2025-08-07 10:08:52 - utils.logger - INFO - logger.py:129 - ✅ ============================================================
+2025-08-07 10:08:52 - utils.logger - INFO - logger.py:223 - ✅ Logging level set to INFO
+2025-08-07 10:08:58 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:08:58 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:08:58 - core.serial_comm - INFO - serial_comm.py:314 - ✅ Found USB serial port: /dev/cu.debug-console
+2025-08-07 10:09:06 - core.serial_comm - INFO - serial_comm.py:50 - ✅ SerialManager initialized for /dev/tty.usbserial-110
+2025-08-07 10:09:06 - motion.trajectory - DEBUG - trajectory.py:54 - Trajectory Generator initialized (rate: 100.0 Hz)
+2025-08-07 10:09:06 - utils.safety - INFO - safety.py:67 - ✅ SafetyMonitor initialized
+2025-08-07 10:09:26 - core.serial_comm - INFO - serial_comm.py:314 - ✅ Found USB serial port: /dev/cu.debug-console
+2025-08-07 10:09:26 - core.serial_comm - INFO - serial_comm.py:50 - ✅ SerialManager initialized for /dev/cu.debug-console
+2025-08-07 10:09:26 - motion.trajectory - DEBUG - trajectory.py:54 - Trajectory Generator initialized (rate: 100.0 Hz)
+2025-08-07 10:09:26 - utils.safety - INFO - safety.py:67 - ✅ SafetyMonitor initialized
+2025-08-07 10:09:38 - core.controller - INFO - controller.py:300 - ✅ Moving to home position...
+2025-08-07 10:09:38 - utils.safety - WARNING - safety.py:98 - ⚠️ Position near limit: hand = 3.140 rad
+2025-08-07 10:09:39 - core.controller - INFO - controller.py:300 - ✅ Moving to home position...
+2025-08-07 10:09:39 - utils.safety - WARNING - safety.py:98 - ⚠️ Position near limit: hand = 3.140 rad
+2025-08-07 10:09:40 - core.serial_comm - INFO - serial_comm.py:110 - ✅ Disconnected from serial port
+2025-08-07 10:09:40 - core.controller - INFO - controller.py:143 - ✅ ✅ Disconnected from RoArm
+2025-08-07 10:09:40 - core.controller - INFO - controller.py:300 - ✅ Moving to home position...
+2025-08-07 10:09:40 - utils.safety - WARNING - safety.py:98 - ⚠️ Position near limit: hand = 3.140 rad
+2025-08-07 10:09:41 - core.controller - INFO - controller.py:300 - ✅ Moving to home position...
+2025-08-07 10:09:41 - utils.safety - WARNING - safety.py:98 - ⚠️ Position near limit: hand = 3.140 rad
+2025-08-07 10:09:42 - core.serial_comm - INFO - serial_comm.py:110 - ✅ Disconnected from serial port
+2025-08-07 10:09:42 - core.controller - INFO - controller.py:143 - ✅ ✅ Disconnected from RoArm
+2025-08-07 10:11:25 - utils.logger - INFO - logger.py:126 - ✅ ============================================================
+2025-08-07 10:11:25 - utils.logger - INFO - logger.py:127 - ✅ RoArm M3 Logging System Initialized
+2025-08-07 10:11:25 - utils.logger - INFO - logger.py:128 - ✅ Log directory: /Users/michaelfleischer/Desktop/RoArmM3v1/logs
+2025-08-07 10:11:25 - utils.logger - INFO - logger.py:129 - ✅ ============================================================
+2025-08-07 10:11:25 - utils.logger - INFO - logger.py:223 - ✅ Logging level set to INFO
+2025-08-07 10:11:34 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:11:34 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:11:34 - core.serial_comm - INFO - serial_comm.py:314 - ✅ Found USB serial port: /dev/cu.debug-console
+2025-08-07 10:11:40 - core.serial_comm - INFO - serial_comm.py:50 - ✅ SerialManager initialized for /dev/tty.usbserial-110
+2025-08-07 10:11:40 - motion.trajectory - DEBUG - trajectory.py:54 - Trajectory Generator initialized (rate: 100.0 Hz)
+2025-08-07 10:11:40 - utils.safety - INFO - safety.py:67 - ✅ SafetyMonitor initialized
+2025-08-07 10:32:56 - utils.logger - INFO - logger.py:126 - ✅ ============================================================
+2025-08-07 10:32:56 - utils.logger - INFO - logger.py:127 - ✅ RoArm M3 Logging System Initialized
+2025-08-07 10:32:56 - utils.logger - INFO - logger.py:128 - ✅ Log directory: /Users/michaelfleischer/Desktop/RoArmM3v1/logs
+2025-08-07 10:32:56 - utils.logger - INFO - logger.py:129 - ✅ ============================================================
+2025-08-07 10:32:56 - utils.logger - INFO - logger.py:223 - ✅ Logging level set to INFO
+2025-08-07 10:33:00 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:33:00 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:33:06 - core.serial_comm - INFO - serial_comm.py:50 - ✅ SerialManager initialized for /dev/tty.usbserial-110
+2025-08-07 10:33:06 - motion.trajectory - DEBUG - trajectory.py:54 - Trajectory Generator initialized (rate: 100.0 Hz)
+2025-08-07 10:33:06 - utils.safety - INFO - safety.py:67 - ✅ SafetyMonitor initialized
+2025-08-07 10:36:37 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:36:37 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:36:39 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:36:39 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:36:40 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:36:40 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:36:41 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:36:41 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:36:42 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:36:42 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:38:29 - utils.logger - INFO - logger.py:126 - ✅ ============================================================
+2025-08-07 10:38:29 - utils.logger - INFO - logger.py:127 - ✅ RoArm M3 Logging System Initialized
+2025-08-07 10:38:29 - utils.logger - INFO - logger.py:128 - ✅ Log directory: /Users/michaelfleischer/Desktop/RoArmM3v1/logs
+2025-08-07 10:38:29 - utils.logger - INFO - logger.py:129 - ✅ ============================================================
+2025-08-07 10:38:29 - utils.logger - INFO - logger.py:223 - ✅ Logging level set to INFO
+2025-08-07 10:38:35 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:38:35 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:38:41 - core.serial_comm - INFO - serial_comm.py:50 - ✅ SerialManager initialized for /dev/tty.usbserial-110
+2025-08-07 10:38:41 - motion.trajectory - DEBUG - trajectory.py:54 - Trajectory Generator initialized (rate: 100.0 Hz)
+2025-08-07 10:38:41 - utils.safety - INFO - safety.py:67 - ✅ SafetyMonitor initialized
+2025-08-07 10:38:51 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:38:51 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:38:52 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.debug-console - n/a
+2025-08-07 10:38:52 - core.serial_comm - INFO - serial_comm.py:295 - ✅ Found port: /dev/cu.Bluetooth-Incoming-Port - n/a
+2025-08-07 10:59:04 - utils.logger - INFO - logger.py:126 - ✅ ============================================================
+2025-08-07 10:59:04 - utils.logger - INFO - logger.py:127 - ✅ RoArm M3 Logging System Initialized
+2025-08-07 10:59:04 - utils.logger - INFO - logger.py:128 - ✅ Log directory: /Users/michaelfleischer/Desktop/RoArmM3v1/logs
+2025-08-07 10:59:04 - utils.logger - INFO - logger.py:129 - ✅ ============================================================
+2025-08-07 10:59:04 - utils.logger - INFO - logger.py:223 - ✅ Logging level set to INFO
+2025-08-07 10:59:18 - utils.debug_mode - INFO - debug_mode.py:69 - ✅ 🔧 MockSerialManager initialized (port=MOCK_PORT)
+2025-08-07 10:59:19 - utils.debug_mode - INFO - debug_mode.py:75 - ✅ ✅ [MOCK] Connected to virtual RoArm
+2025-08-07 10:59:19 - utils.debug_mode - INFO - debug_mode.py:220 - ✅ 🎮 MockController initialized (mode=realistic)
+2025-08-07 10:59:19 - teaching.recorder - INFO - recorder.py:212 - ✅ Teaching Recorder initialized
+2025-08-07 10:59:19 - calibration.calibration_suite - WARNING - calibration_suite.py:241 - ⚠️ No calibration file found at calibration/system_calibration.json
+2025-08-07 10:59:19 - calibration.calibration_suite - WARNING - calibration_suite.py:779 - ⚠️ No valid calibration found - using defaults
+2025-08-07 10:59:19 - calibration.calibration_suite - INFO - calibration_suite.py:272 - ✅ Calibration Suite initialized
+2025-08-07 10:59:38 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.700 rad)
+2025-08-07 10:59:38 - utils.debug_mode - INFO - debug_mode.py:279 - ✅ [MOCK] Moving to home position...
+2025-08-07 10:59:39 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.700 rad)
+2025-08-07 10:59:39 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=2.060 rad)
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=2.060 rad)
+2025-08-07 10:59:40 - utils.debug_mode - WARNING - debug_mode.py:312 - ⚠️ 🚨 [MOCK] EMERGENCY STOP
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:320 - ✅ [MOCK] Emergency stop reset
+2025-08-07 10:59:40 - patterns.scan_patterns - INFO - scan_patterns.py:175 - ✅ Generated 4 raster scan points
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:344 - ✅ [MOCK] Executing pattern: Raster Scan (4 points)
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=4.635 rad)
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.267 rad)
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:371 - ✅ ✅ [MOCK] Pattern completed: Raster Scan
+2025-08-07 10:59:40 - teaching.recorder - INFO - recorder.py:252 - ✅ Started recording 'test_seq' in manual mode
+2025-08-07 10:59:40 - teaching.recorder - INFO - recorder.py:347 - ✅ Waypoint 1 recorded (speed=1.0, acc=2.0)
+2025-08-07 10:59:40 - teaching.recorder - INFO - recorder.py:347 - ✅ Waypoint 2 recorded (speed=1.0, acc=2.0)
+2025-08-07 10:59:40 - teaching.recorder - INFO - recorder.py:293 - ✅ Recording stopped: 2 waypoints in 0.2s
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.270 rad)
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:380 - ✅ [MOCK] Disconnecting...
+2025-08-07 10:59:40 - utils.debug_mode - INFO - debug_mode.py:81 - ✅ 🔌 [MOCK] Disconnected from virtual RoArm
+2025-08-07 11:01:24 - utils.logger - INFO - logger.py:126 - ✅ ============================================================
+2025-08-07 11:01:24 - utils.logger - INFO - logger.py:127 - ✅ RoArm M3 Logging System Initialized
+2025-08-07 11:01:24 - utils.logger - INFO - logger.py:128 - ✅ Log directory: /Users/michaelfleischer/Desktop/RoArmM3v1/logs
+2025-08-07 11:01:24 - utils.logger - INFO - logger.py:129 - ✅ ============================================================
+2025-08-07 11:01:24 - utils.logger - INFO - logger.py:223 - ✅ Logging level set to INFO
+2025-08-07 11:01:31 - utils.debug_mode - INFO - debug_mode.py:69 - ✅ 🔧 MockSerialManager initialized (port=MOCK_PORT)
+2025-08-07 11:01:31 - utils.debug_mode - INFO - debug_mode.py:75 - ✅ ✅ [MOCK] Connected to virtual RoArm
+2025-08-07 11:01:31 - utils.debug_mode - INFO - debug_mode.py:220 - ✅ 🎮 MockController initialized (mode=realistic)
+2025-08-07 11:01:31 - teaching.recorder - INFO - recorder.py:212 - ✅ Teaching Recorder initialized
+2025-08-07 11:01:31 - calibration.calibration_suite - WARNING - calibration_suite.py:241 - ⚠️ No calibration file found at calibration/system_calibration.json
+2025-08-07 11:01:31 - calibration.calibration_suite - WARNING - calibration_suite.py:779 - ⚠️ No valid calibration found - using defaults
+2025-08-07 11:01:31 - calibration.calibration_suite - INFO - calibration_suite.py:272 - ✅ Calibration Suite initialized
+2025-08-07 11:01:41 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.100 rad)
+2025-08-07 11:01:45 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.100 rad)
+2025-08-07 11:01:50 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.100 rad)
+2025-08-07 11:01:50 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.100 rad)
+2025-08-07 11:02:02 - patterns.scan_patterns - INFO - scan_patterns.py:175 - ✅ Generated 25 raster scan points
+2025-08-07 11:02:02 - utils.debug_mode - INFO - debug_mode.py:344 - ✅ [MOCK] Executing pattern: Raster Scan (25 points)
+2025-08-07 11:02:02 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=4.818 rad)
+2025-08-07 11:02:02 - utils.debug_mode - INFO - debug_mode.py:360 - ✅ [MOCK] Pattern progress: 40.0%
+2025-08-07 11:02:02 - utils.debug_mode - INFO - debug_mode.py:360 - ✅ [MOCK] Pattern progress: 80.0%
+2025-08-07 11:02:02 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=1.369 rad)
+2025-08-07 11:02:02 - utils.debug_mode - INFO - debug_mode.py:371 - ✅ ✅ [MOCK] Pattern completed: Raster Scan
+2025-08-07 11:02:18 - teaching.recorder - INFO - recorder.py:252 - ✅ Started recording 'ss' in manual mode
+2025-08-07 11:02:32 - utils.debug_mode - INFO - debug_mode.py:279 - ✅ [MOCK] Moving to home position...
+2025-08-07 11:02:32 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=5.011 rad)
+2025-08-07 11:02:41 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.700 rad)
+2025-08-07 11:02:41 - utils.debug_mode - INFO - debug_mode.py:279 - ✅ [MOCK] Moving to home position...
+2025-08-07 11:02:41 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.700 rad)
+2025-08-07 11:02:42 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=2.060 rad)
+2025-08-07 11:02:42 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=2.060 rad)
+2025-08-07 11:02:42 - utils.debug_mode - WARNING - debug_mode.py:312 - ⚠️ 🚨 [MOCK] EMERGENCY STOP
+2025-08-07 11:02:42 - utils.debug_mode - INFO - debug_mode.py:320 - ✅ [MOCK] Emergency stop reset
+2025-08-07 11:02:42 - patterns.scan_patterns - INFO - scan_patterns.py:175 - ✅ Generated 4 raster scan points
+2025-08-07 11:02:42 - utils.debug_mode - INFO - debug_mode.py:344 - ✅ [MOCK] Executing pattern: Raster Scan (4 points)
+2025-08-07 11:02:42 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=4.635 rad)
+2025-08-07 11:02:42 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.267 rad)
+2025-08-07 11:02:42 - utils.debug_mode - INFO - debug_mode.py:371 - ✅ ✅ [MOCK] Pattern completed: Raster Scan
+2025-08-07 11:02:42 - teaching.recorder - WARNING - recorder.py:231 - ⚠️ Already recording
+2025-08-07 11:02:43 - utils.debug_mode - INFO - debug_mode.py:274 - ✅ ✅ [MOCK] Moved to position (distance=0.270 rad)
+2025-08-07 11:02:59 - utils.debug_mode - INFO - debug_mode.py:380 - ✅ [MOCK] Disconnecting...
+2025-08-07 11:02:59 - utils.debug_mode - INFO - debug_mode.py:81 - ✅ 🔌 [MOCK] Disconnected from virtual RoArm
+2025-08-07 11:49:57 - utils.logger - INFO - logger.py:126 - ✅ ============================================================
+2025-08-07 11:49:57 - utils.logger - INFO - logger.py:127 - ✅ RoArm M3 Logging System Initialized
+2025-08-07 11:49:57 - utils.logger - INFO - logger.py:128 - ✅ Log directory: /Users/michaelfleischer/Desktop/RoArmM3v1/logs
+2025-08-07 11:49:57 - utils.logger - INFO - logger.py:129 - ✅ ============================================================
+2025-08-07 11:49:57 - utils.logger - INFO - logger.py:223 - ✅ Logging level set to INFO
+2025-08-07 11:50:02 - utils.debug_mode - INFO - debug_mode.py:69 - ✅ 🔧 MockSerialManager initialized (port=MOCK_PORT)
+2025-08-07 11:50:02 - utils.debug_mode - INFO - debug_mode.py:75 - ✅ ✅ [MOCK] Connected to virtual RoArm
+2025-08-07 11:50:02 - utils.debug_mode - INFO - debug_mode.py:220 - ✅ 🎮 MockController initialized (mode=failure)
+2025-08-07 11:50:02 - teaching.recorder - INFO - recorder.py:212 - ✅ Teaching Recorder initialized
+2025-08-07 11:50:02 - calibration.calibration_suite - WARNING - calibration_suite.py:241 - ⚠️ No calibration file found at calibration/system_calibration.json
+2025-08-07 11:50:02 - calibration.calibration_suite - WARNING - calibration_suite.py:779 - ⚠️ No valid calibration found - using defaults
+2025-08-07 11:50:02 - calibration.calibration_suite - INFO - calibration_suite.py:272 - ✅ Calibration Suite initialized
