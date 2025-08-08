@@ -1,0 +1,163 @@
+[
+  {
+    "timestamp": 1754562281.081464,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562282.117294,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562283.1349912,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562284.1759832,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562285.22205,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562286.255141,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562287.303652,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562288.337118,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562289.3719628,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562290.412339,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562291.460734,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562292.511986,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562293.228117,
+    "event_type": "SHUTDOWN",
+    "severity": "INFO",
+    "message": "Graceful shutdown initiated: user_request",
+    "data": null
+  },
+  {
+    "timestamp": 1754562293.5170171,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562294.5229099,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562295.529046,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562296.5315578,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562297.537475,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562298.540118,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562299.5427399,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562300.5474591,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562301.5534909,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562302.556166,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  }
+]
