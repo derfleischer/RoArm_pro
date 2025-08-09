@@ -1,0 +1,387 @@
+[
+  {
+    "timestamp": 1754562212.7381918,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562213.7585049,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562214.795797,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562215.834798,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562216.869039,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562217.910484,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562218.958003,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562219.991503,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562221.029669,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562222.046755,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562223.0748549,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562224.120485,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562225.1581771,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562226.195623,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562227.2293901,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562228.26263,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562229.29968,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562230.337644,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562231.354645,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562232.377295,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562233.400198,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562234.422252,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562235.464739,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562236.4824278,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562237.515546,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562238.550473,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562239.596222,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562240.6355681,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562241.673239,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562242.699807,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562243.731154,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562244.7565272,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562245.7850392,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562246.82881,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562247.863368,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562248.8836281,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562249.9124532,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562250.9455712,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562251.969089,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562252.991456,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562254.0141199,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562255.0689018,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562256.0996711,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562257.124258,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562258.174602,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562259.212978,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562260.2413282,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562261.289612,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562262.324842,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562263.360308,
+    "event_type": "VOLTAGE_WARNING",
+    "severity": "WARNING",
+    "message": "Voltage: 0V",
+    "data": null
+  },
+  {
+    "timestamp": 1754562266.2399738,
+    "event_type": "SHUTDOWN",
+    "severity": "INFO",
+    "message": "Graceful shutdown initiated: user_request",
+    "data": null
+  },
+  {
+    "timestamp": 1754562266.366567,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562267.372264,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562268.37837,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  },
+  {
+    "timestamp": 1754562269.37996,
+    "event_type": "COMMUNICATION_LOST",
+    "severity": "ERROR",
+    "message": "Serial connection lost",
+    "data": null
+  }
+]

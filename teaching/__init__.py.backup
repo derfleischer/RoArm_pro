@@ -1,0 +1,63 @@
+# ============================================
+# teaching/__init__.py
+# ============================================
+"""
+RoArm M3 Teaching System
+Advanced recording and playback with trajectory planning
+"""
+
+__version__ = '3.0.0'
+__author__ = 'RoArm Professional Team'
+
+from .recorder import (
+    TeachingRecorder,
+    TeachingWaypoint,
+    TeachingSequence,
+    RecordingMode
+)
+
+# Try Enhanced Teaching features
+try:
+    from enhanced.teaching import (
+        SmartTeaching,
+        PathLearning,
+        SkillTransfer,
+        TeachingOptimizer
+    )
+    ENHANCED_TEACHING = True
+    
+    class EnhancedTeachingRecorder(TeachingRecorder):
+        """Extended teaching with ML optimization."""
+        
+        def __init__(self, controller, config=None):
+            super().__init__(controller, config)
+            self.smart_teaching = SmartTeaching(controller)
+            self.path_learning = PathLearning()
+            self.skill_transfer = SkillTransfer()
+            self.optimizer = TeachingOptimizer()
+            
+        def learn_from_demonstration(self):
+            """Learn skills from human demonstration."""
+            return self.smart_teaching.learn()
+        
+        def optimize_sequence(self, sequence):
+            """Optimize recorded sequence with ML."""
+            return self.optimizer.optimize(sequence)
+        
+        def transfer_skill(self, skill_name, target_object):
+            """Transfer learned skill to new object."""
+            return self.skill_transfer.apply(skill_name, target_object)
+    
+    # Use enhanced version
+    TeachingRecorder = EnhancedTeachingRecorder
+    
+except ImportError:
+    ENHANCED_TEACHING = False
+
+__all__ = [
+    'TeachingRecorder',
+    'TeachingWaypoint',
+    'TeachingSequence',
+    'RecordingMode',
+    'ENHANCED_TEACHING'
+]
