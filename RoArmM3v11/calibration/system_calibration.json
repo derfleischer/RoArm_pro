@@ -1,0 +1,313 @@
+{
+  "version": "1.0.0",
+  "timestamp": 1754603031.793725,
+  "joints": {
+    "base": {
+      "joint_name": "base",
+      "offset": -0.0,
+      "scale": 1.0,
+      "backlash": 0.0,
+      "min_limit": 0.15,
+      "max_limit": -0.15,
+      "safe_min": 0.3,
+      "safe_max": -0.3,
+      "max_velocity": 1.0,
+      "max_acceleration": 2.0,
+      "friction": 0.0,
+      "damping": 0.0,
+      "repeatability": 0.001,
+      "accuracy": 0.0,
+      "temp_coefficient": 0.0,
+      "reference_temp": 25.0,
+      "calibration_points": [
+        {
+          "joint": "base",
+          "target_position": -1.9179999999999997,
+          "actual_position": -1.9179999999999997,
+          "error": 0.0,
+          "timestamp": 1754605913.869345,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "base",
+          "target_position": 0.0,
+          "actual_position": 0.0,
+          "error": 0.0,
+          "timestamp": 1754605948.448891,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "base",
+          "target_position": 1.9179999999999997,
+          "actual_position": 1.9179999999999997,
+          "error": 0.0,
+          "timestamp": 1754605982.995126,
+          "temperature": null,
+          "load": null
+        }
+      ]
+    },
+    "shoulder": {
+      "joint_name": "shoulder",
+      "offset": -0.0,
+      "scale": 1.0,
+      "backlash": 0.0,
+      "min_limit": 0.15,
+      "max_limit": -0.15,
+      "safe_min": 0.3,
+      "safe_max": -0.3,
+      "max_velocity": 1.0,
+      "max_acceleration": 2.0,
+      "friction": 0.0,
+      "damping": 0.0,
+      "repeatability": 0.001,
+      "accuracy": 0.0,
+      "temp_coefficient": 0.0,
+      "reference_temp": 25.0,
+      "calibration_points": [
+        {
+          "joint": "shoulder",
+          "target_position": -0.8189999999999997,
+          "actual_position": -0.8189999999999997,
+          "error": 0.0,
+          "timestamp": 1754606027.419855,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "shoulder",
+          "target_position": 0.0,
+          "actual_position": 0.0,
+          "error": 0.0,
+          "timestamp": 1754606040.4885492,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "shoulder",
+          "target_position": 0.8189999999999997,
+          "actual_position": 0.8189999999999997,
+          "error": 0.0,
+          "timestamp": 1754606053.557648,
+          "temperature": null,
+          "load": null
+        }
+      ]
+    },
+    "elbow": {
+      "joint_name": "elbow",
+      "offset": -0.0,
+      "scale": 1.0,
+      "backlash": 0.0,
+      "min_limit": 0.15,
+      "max_limit": -0.15,
+      "safe_min": 0.3,
+      "safe_max": -0.3,
+      "max_velocity": 1.0,
+      "max_acceleration": 2.0,
+      "friction": 0.0,
+      "damping": 0.0,
+      "repeatability": 0.001,
+      "accuracy": 0.0,
+      "temp_coefficient": 0.0,
+      "reference_temp": 25.0,
+      "calibration_points": [
+        {
+          "joint": "elbow",
+          "target_position": 0.7510000000000001,
+          "actual_position": 0.7510000000000001,
+          "error": 0.0,
+          "timestamp": 1754606077.259451,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "elbow",
+          "target_position": 1.5699999999999998,
+          "actual_position": 1.5699999999999998,
+          "error": 0.0,
+          "timestamp": 1754606090.339583,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "elbow",
+          "target_position": 2.389,
+          "actual_position": 2.389,
+          "error": 0.0,
+          "timestamp": 1754606103.452016,
+          "temperature": null,
+          "load": null
+        }
+      ]
+    },
+    "wrist": {
+      "joint_name": "wrist",
+      "offset": -0.0,
+      "scale": 1.0,
+      "backlash": 0.0,
+      "min_limit": 0.15,
+      "max_limit": -0.15,
+      "safe_min": 0.3,
+      "safe_max": -0.3,
+      "max_velocity": 1.0,
+      "max_acceleration": 2.0,
+      "friction": 0.0,
+      "damping": 0.0,
+      "repeatability": 0.001,
+      "accuracy": 2.0061320993394225,
+      "temp_coefficient": 0.0,
+      "reference_temp": 25.0,
+      "calibration_points": [
+        {
+          "joint": "wrist",
+          "target_position": -0.8189999999999997,
+          "actual_position": 0.0,
+          "error": 0.8189999999999997,
+          "timestamp": 1754606117.113036,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "wrist",
+          "target_position": 0.0,
+          "actual_position": 0.0,
+          "error": 0.0,
+          "timestamp": 1754606120.060889,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "wrist",
+          "target_position": 0.8189999999999997,
+          "actual_position": 0.0,
+          "error": -0.8189999999999997,
+          "timestamp": 1754606123.0070488,
+          "temperature": null,
+          "load": null
+        }
+      ]
+    },
+    "roll": {
+      "joint_name": "roll",
+      "offset": -0.0,
+      "scale": 1.0,
+      "backlash": 0.0,
+      "min_limit": 0.15,
+      "max_limit": -0.15,
+      "safe_min": 0.3,
+      "safe_max": -0.3,
+      "max_velocity": 1.0,
+      "max_acceleration": 2.0,
+      "friction": 0.0,
+      "damping": 0.0,
+      "repeatability": 0.001,
+      "accuracy": 0.0,
+      "temp_coefficient": 0.0,
+      "reference_temp": 25.0,
+      "calibration_points": [
+        {
+          "joint": "roll",
+          "target_position": -1.9179999999999997,
+          "actual_position": -1.9179999999999997,
+          "error": 0.0,
+          "timestamp": 1754606158.851995,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "roll",
+          "target_position": 0.0,
+          "actual_position": 0.0,
+          "error": 0.0,
+          "timestamp": 1754606193.437631,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "roll",
+          "target_position": 1.9179999999999997,
+          "actual_position": 1.9179999999999997,
+          "error": 0.0,
+          "timestamp": 1754606228.0506082,
+          "temperature": null,
+          "load": null
+        }
+      ]
+    },
+    "hand": {
+      "joint_name": "hand",
+      "offset": -0.0,
+      "scale": 1.0,
+      "backlash": 0.0,
+      "min_limit": 0.15,
+      "max_limit": -0.15,
+      "safe_min": 0.3,
+      "safe_max": -0.3,
+      "max_velocity": 1.0,
+      "max_acceleration": 2.0,
+      "friction": 0.0,
+      "damping": 0.0,
+      "repeatability": 0.001,
+      "accuracy": 0.0,
+      "temp_coefficient": 0.0,
+      "reference_temp": 25.0,
+      "calibration_points": [
+        {
+          "joint": "hand",
+          "target_position": 1.6690000000000003,
+          "actual_position": 1.6690000000000003,
+          "error": 0.0,
+          "timestamp": 1754606266.549983,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "hand",
+          "target_position": 2.11,
+          "actual_position": 2.11,
+          "error": 0.0,
+          "timestamp": 1754606274.089826,
+          "temperature": null,
+          "load": null
+        },
+        {
+          "joint": "hand",
+          "target_position": 2.5509999999999997,
+          "actual_position": 2.5509999999999997,
+          "error": 0.0,
+          "timestamp": 1754606281.651018,
+          "temperature": null,
+          "load": null
+        }
+      ]
+    }
+  },
+  "scanner": {
+    "mount_offset_x": 0.0,
+    "mount_offset_y": 0.0,
+    "mount_offset_z": 0.05,
+    "roll_offset": 0.0,
+    "pitch_offset": 0.0,
+    "yaw_offset": 0.0,
+    "optimal_distance": 0.15,
+    "optimal_speed": 0.3,
+    "optimal_settle_time": 0.5,
+    "focus_distance": 0.15,
+    "depth_of_field": 0.1,
+    "vibration_damping_time": 0.3,
+    "acceleration_limit": 1.0,
+    "reference_points": []
+  },
+  "dh_parameters": null,
+  "gravity_compensation": {
+    "shoulder": 0.05,
+    "elbow": 0.03
+  },
+  "temperature_model": null,
+  "overall_accuracy": 0.01,
+  "calibration_valid": true,
+  "last_verification": 1754772812.89489
+}
